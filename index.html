@@ -2,86 +2,363 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TLG Global COO Office</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>TLG Global COO Office Dashboard</title>
 
 <style>
-html,body{
-    margin:0;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    background:#000;
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #111;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-iframe{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100vw;
-    height:100vh;
-    border:0;
+/* =========================================================
+   TOP EMERALD GREEN BAR
+   ========================================================= */
+
+#top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 36px;
+
+    background: #046307;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 14px;
+    box-sizing: border-box;
+
+    z-index: 1000;
+
+    font-size: 14px;
+    font-weight: bold;
 }
+
+/* LEFT - DASHBOARD NAME */
+
+#title {
+    position: absolute;
+    left: 14px;
+    white-space: nowrap;
+}
+
+/* CENTER - COO OFFICE */
+
+#ceoTitle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 17px;
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+/* RIGHT - COUNTDOWN */
+
+#countdown {
+    position: absolute;
+    right: 14px;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   DASHBOARDS
+   ========================================================= */
+
+iframe {
+    position: absolute;
+
+    top: 36px;
+    left: 0;
+
+    width: 100%;
+    height: calc(100% - 36px);
+
+    border: 0;
+
+    display: none;
+}
+
+iframe.active {
+    display: block;
+}
+
 </style>
 
 </head>
 
 <body>
 
+
+<!-- =========================================================
+     TOP BAR
+     ========================================================= -->
+
+<div id="top">
+
+    <!-- LEFT -->
+    <div id="title">
+        Account & Treasury - All Dashboard Graph Details
+    </div>
+
+    <!-- CENTER -->
+    <div id="ceoTitle">
+        TLG Global COO Office
+    </div>
+
+    <!-- RIGHT -->
+    <div id="countdown">
+        Next switch in <span id="count">170</span>s
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     DASHBOARD 1 - ACCOUNT & TREASURY
+     ========================================================= -->
+
 <iframe
-id="player"
-allow="autoplay; fullscreen"
-allowfullscreen>
+    class="active"
+    src="https://analytics.zoho.com/ZDBSlideshow.cc?SLIDEID=2298565000025746073&SLIDEKEY=d3a2e6590c076bfd81309e69b2b66464faf25b2f90bd6ec5f59ea90ddadb459e&INTERVAL=25&AUTOPLAY=true&INCLUDETITLE=true&INCLUDEDESC=true&SOCIALWIDGETS=false">
+</iframe>
+
+
+<!-- =========================================================
+     DASHBOARD 2 - IT / DESK TICKET DETAILS
+     ========================================================= -->
+
+<iframe
+    src="https://analytics.zoho.com/ZDBSlideshow.cc?SLIDEID=2298565000025566492&SLIDEKEY=6ce43f838caa01d4438606870f133ee0cad58e7eb304a091826217407352120d&INTERVAL=25&AUTOPLAY=true&INCLUDETITLE=true&INCLUDEDESC=true&SOCIALWIDGETS=false">
+</iframe>
+
+
+<!-- =========================================================
+     DASHBOARD 3 - LEGAL / CONTRACT REQUEST DATABASE
+     ========================================================= -->
+
+<iframe
+    src="https://analytics.zoho.com/ZDBSlideshow.cc?SLIDEID=2298565000025398060&SLIDEKEY=89be909ff1912a40d506f881dfd10a80302b80dfdac7eb3d1072515afee532c7&INTERVAL=25&AUTOPLAY=true&INCLUDETITLE=true&INCLUDEDESC=true&SOCIALWIDGETS=false">
+</iframe>
+
+
+<!-- =========================================================
+     DASHBOARD 4 - SUPPLY CHAIN / GOAL DETAILS
+     ========================================================= -->
+
+<iframe
+    src="https://analytics.zoho.com/ZDBSlideshow.cc?SLIDEID=2298565000025365702&SLIDEKEY=1f537b8343a9873f03cb0f0cfb3356fe9aeb243dc28016f0f205cc57db4ab777&INTERVAL=25&AUTOPLAY=true&INCLUDETITLE=true&INCLUDEDESC=true&SOCIALWIDGETS=false">
+</iframe>
+
+
+<!-- =========================================================
+     DASHBOARD 5 - SUPPLY CHAIN / GOAL SHIPPING STATUS
+     ========================================================= -->
+
+<iframe
+    src="https://analytics.zoho.com/ZDBSlideshow.cc?SLIDEID=2298565000025365937&SLIDEKEY=7f68a28dba3863e7283a88aa5dd3a2ed26b291c0eaef4efee4592ff62941acf1&INTERVAL=25&AUTOPLAY=true&INCLUDETITLE=true&INCLUDEDESC=true&SOCIALWIDGETS=false">
+</iframe>
+
+
+<!-- =========================================================
+     DASHBOARD 6 - COMPLIANCE / STATUS
+     ========================================================= -->
+
+<iframe
+    src="https://analytics.zoho.com/ZDBSlideshow.cc?SLIDEID=2298565000025365617&SLIDEKEY=4881488bc1a616826e93ed989efe3c04b20e69816c33d71a9fcffb395666abd4&INTERVAL=25&AUTOPLAY=true&INCLUDETITLE=true&INCLUDEDESC=true&SOCIALWIDGETS=false">
+</iframe>
+
+
+<!-- =========================================================
+     DASHBOARD 7 - LEGAL / DOCUMENT COLLECTION STATUS
+     ========================================================= -->
+
+<iframe
+    src="https://analytics.zoho.com/ZDBSlideshow.cc?SLIDEID=2298565000025365609&SLIDEKEY=858880755f35f22028d65e3a60346d785c941b3491660260eb268e2475c6ab1c&INTERVAL=25&AUTOPLAY=true&INCLUDETITLE=true&INCLUDEDESC=true&SOCIALWIDGETS=false">
+</iframe>
+
+
+<!-- =========================================================
+     DASHBOARD 8 - BD / L TOWERS
+     ========================================================= -->
+
+<iframe
+    src="https://analytics.zoho.com/ZDBSlideshow.cc?SLIDEID=2298565000025000224&SLIDEKEY=394e02b18de42620d86edba87f8568b10437a66c450715dea87c5c4eaaf9e25a&INTERVAL=25&AUTOPLAY=true&INCLUDETITLE=true&INCLUDEDESC=true&SOCIALWIDGETS=false">
+</iframe>
+
+
+<!-- =========================================================
+     DASHBOARD 9 - HR / SITE VISIT
+     ========================================================= -->
+
+<iframe
+    src="https://analytics.zoho.com/ZDBSlideshow.cc?SLIDEID=2298565000024817183&SLIDEKEY=c3ee808a71441c440adcf1e79dd7f00422c31c0f8507f9f4d9a3213a55984379&INTERVAL=25&AUTOPLAY=true&INCLUDETITLE=true&INCLUDEDESC=true&SOCIALWIDGETS=false">
+</iframe>
+
+
+<!-- =========================================================
+     DASHBOARD 10 - IMMIGRATION / BIOMETRIC
+     ========================================================= -->
+
+<iframe
+    src="https://analytics.zoho.com/ZDBSlideshow.cc?SLIDEID=2298565000024817167&SLIDEKEY=da3633367dab18114e5723710c06a2eaa04f2d3cd56adf4f0cb713d1bb829b81&INTERVAL=25&AUTOPLAY=true&INCLUDETITLE=true&INCLUDEDESC=true&SOCIALWIDGETS=false">
+</iframe>
+
+
+<!-- =========================================================
+     DASHBOARD 11 - EMPLOYEE DATABASE
+     ========================================================= -->
+
+<iframe
+    src="https://analytics.zoho.com/ZDBSlideshow.cc?SLIDEID=2298565000024697225&SLIDEKEY=6d6a159e71502a05ca88d2e050ca59ac218761231fda53245d70295f0752db17&INTERVAL=25&AUTOPLAY=true&INCLUDETITLE=true&INCLUDEDESC=true&SOCIALWIDGETS=false">
+</iframe>
+
+
+<!-- =========================================================
+     DASHBOARD 12 - TIMESHEET
+     ========================================================= -->
+
+<iframe
+    src="https://analytics.zoho.com/ZDBSlideshow.cc?SLIDEID=2298565000024697222&SLIDEKEY=c27234c7a8e9c051f95c3698b5a3626f7dc8d78dba58ae2ee445246598fc4645&INTERVAL=25&AUTOPLAY=true&INCLUDETITLE=true&INCLUDEDESC=true&SOCIALWIDGETS=false">
 </iframe>
 
 
 <script>
 
-const videos =
-"NVUsDQhtq6U,gv6KQlQK7tU,JuAuWy-dCkc,jcWhuuJ1X-U,FanL_bNsrSw";
+/* =========================================================
+   DASHBOARD TITLES - REVERSED ORDER
+   ========================================================= */
+
+const titles = [
+
+    "Account & Treasury - All Dashboard Graph Details",
+
+    "Department IT - Desk Ticket Details",
+
+    "Department Legal - Contract Request Database",
+
+    "Department Supply Chain - Goal Details",
+
+    "Department Supply Chain - Goal Shipping Status",
+
+    "Department Compliance - Status",
+
+    "Department Legal - Document Collection Status",
+
+    "Department BD - L Towers",
+
+    "Department HR - Site Visit",
+
+    "Immigration - Biometric",
+
+    "Employee Database",
+
+    "Timesheet"
+
+];
 
 
-document.getElementById("player").src =
-"https://www.youtube.com/embed/NVUsDQhtq6U" +
-"?autoplay=1" +
-"&mute=1" +
-"&controls=0" +
-"&rel=0" +
-"&modestbranding=1" +
-"&playsinline=1" +
-"&loop=1" +
-"&playlist=" + videos;
+/* =========================================================
+   GET ALL DASHBOARDS
+   ========================================================= */
+
+const frames = document.querySelectorAll("iframe");
 
 
+/* =========================================================
+   SETTINGS
+   ========================================================= */
 
-// Try full screen automatically
-document.addEventListener("DOMContentLoaded",()=>{
+const SWITCH_TIME = 170;
 
-    let elem=document.documentElement;
+let current = 0;
 
-    if(elem.requestFullscreen){
-        elem.requestFullscreen().catch(()=>{});
+let remaining = SWITCH_TIME;
+
+
+/* =========================================================
+   SHOW DASHBOARD
+   ========================================================= */
+
+function showDashboard(index) {
+
+    frames.forEach(frame => {
+        frame.classList.remove("active");
+    });
+
+    frames[index].classList.add("active");
+
+    document.getElementById("title").textContent =
+        titles[index];
+
+    current = index;
+
+    remaining = SWITCH_TIME;
+
+    document.getElementById("count").textContent =
+        remaining;
+}
+
+
+/* =========================================================
+   COUNTDOWN + AUTO SWITCH
+   ========================================================= */
+
+setInterval(() => {
+
+    remaining--;
+
+    document.getElementById("count").textContent =
+        remaining;
+
+    if (remaining <= 0) {
+
+        const nextDashboard =
+            (current + 1) % frames.length;
+
+        showDashboard(nextDashboard);
+
     }
 
-});
+}, 1000);
 
 
-// Hide mouse cursor
+/* =========================================================
+   FULLSCREEN ON FIRST CLICK
+   ========================================================= */
 
-let timer;
+document.addEventListener("click", () => {
 
-document.onmousemove=function(){
+    if (!document.fullscreenElement) {
 
-    document.body.style.cursor="default";
+        document.documentElement
+            .requestFullscreen()
+            .catch(() => {});
 
-    clearTimeout(timer);
+    }
 
-    timer=setTimeout(()=>{
-        document.body.style.cursor="none";
-    },2000);
+}, { once: true });
 
-};
 
+/* =========================================================
+   START
+   ========================================================= */
+
+showDashboard(0);
 
 </script>
 
