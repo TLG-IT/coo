@@ -6,56 +6,83 @@
 <title>TLG Global COO Office</title>
 
 <style>
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: #000;
+html,body{
+    margin:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#000;
 }
 
-iframe {
-    position: fixed;
-    inset: 0;
-    width: 100vw;
-    height: 100vh;
-    border: none;
+iframe{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    border:0;
 }
 </style>
+
 </head>
+
 <body>
 
 <iframe
-    id="site"
-    src="https://tlg.global/about/"
-    allowfullscreen>
+id="player"
+allow="autoplay; fullscreen"
+allowfullscreen>
 </iframe>
 
+
 <script>
-// Attempt fullscreen
-async function goFullscreen() {
-    try {
-        if (!document.fullscreenElement) {
-            await document.documentElement.requestFullscreen();
-        }
-    } catch(e) {}
-}
 
-window.onload = goFullscreen;
+const videos =
+"NVUsDQhtq6U,gv6KQlQK7tU,JuAuWy-dCkc,jcWhuuJ1X-U,FanL_bNsrSw";
 
-// Enter fullscreen on first click (required by many browsers)
-document.addEventListener("click", goFullscreen, { once: true });
+
+document.getElementById("player").src =
+"https://www.youtube.com/embed/NVUsDQhtq6U" +
+"?autoplay=1" +
+"&mute=1" +
+"&controls=0" +
+"&rel=0" +
+"&modestbranding=1" +
+"&playsinline=1" +
+"&loop=1" +
+"&playlist=" + videos;
+
+
+
+// Try full screen automatically
+document.addEventListener("DOMContentLoaded",()=>{
+
+    let elem=document.documentElement;
+
+    if(elem.requestFullscreen){
+        elem.requestFullscreen().catch(()=>{});
+    }
+
+});
+
 
 // Hide mouse cursor
+
 let timer;
-document.onmousemove = function () {
-    document.body.style.cursor = "default";
+
+document.onmousemove=function(){
+
+    document.body.style.cursor="default";
+
     clearTimeout(timer);
-    timer = setTimeout(() => {
-        document.body.style.cursor = "none";
-    }, 2000);
+
+    timer=setTimeout(()=>{
+        document.body.style.cursor="none";
+    },2000);
+
 };
+
+
 </script>
 
 </body>
